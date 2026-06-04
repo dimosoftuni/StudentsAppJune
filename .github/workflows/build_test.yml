@@ -21,4 +21,6 @@ jobs:
         npm install
       
     - name: Run integration tests
-      run: npm test
+      run: |
+        cd ${{ github.event.repository.name }}
+        npm test
