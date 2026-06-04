@@ -13,7 +13,7 @@ jobs:
     
     steps:
     - name: Checkout the repository
-      run: git clone ${{ github.event.repository.clone_url }} && cd StudentsAppJune
+      run: git clone ${{ github.event.repository.clone_url }}
 
     - name: Install dependencies
       run: npm install
