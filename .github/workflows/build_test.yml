@@ -13,14 +13,10 @@ jobs:
     
     steps:
     - name: Checkout the repository
-      run: git clone ${{ github.event.repository.clone_url }}
+      uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: |
-        cd ${{ github.event.repository.name }}
-        npm install
+      run: npm install
       
     - name: Run integration tests
-      run: |
-        cd ${{ github.event.repository.name }}
-        npm test
+      run: npm test
