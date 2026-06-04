@@ -13,7 +13,7 @@ jobs:
     
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v4
+      run: git clone ${{ github.event.repository.clone_url }} && cd repo
 
     - name: Install dependencies
       run: npm install
