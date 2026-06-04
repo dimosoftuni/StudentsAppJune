@@ -13,10 +13,9 @@ jobs:
     
     steps:
     - name: Checkout the repository
-      run: git clone ${{ github.event.repository.clone_url }}
-
-    - name: Enter the repository
-      run: cd ${{ github.event.repository.name }}
+      run: |
+        git clone ${{ github.event.repository.clone_url }}
+        cd ${{ github.event.repository.name }}
 
     - name: Install dependencies
       run: npm install
