@@ -1,4 +1,4 @@
-// comment new test
+// comment new test 2
 const assert = require('assert');
 const fetch = require('node-fetch');
 
